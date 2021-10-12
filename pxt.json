@@ -1,0 +1,27 @@
+{
+    "name": "skillmap-game-of-life",
+    "description": "",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "skillmap.md",
+        "activity1.md",
+        "activity2.md",
+        "activity3.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.6.24",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "tsprj"
+}
