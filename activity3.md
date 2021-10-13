@@ -127,6 +127,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 ```
 
 ```package
-arcade-conways=github:jwunderl/arcade-conways#v0.0.3
+arcade-conways=github:jwunderl/arcade-conways#v0.0.4
 ```
 

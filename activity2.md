@@ -39,7 +39,7 @@ that these rules are:
 3. All other live cells die, and all other dead cells stay dead. 
 
 We've made a function for each of these rules. Look at the 
-`||conways:on generation [x] [y]||` block to see where they are being 
+`||conways:on generation update [x] [y]||` block to see where they are being 
 called! 
 
 ## Surviving Cells 

@@ -1,20 +1,20 @@
-# Conway’s Game of LIfe
+# Conway's Game of LIfe
 
 ## Artificial Intelligence @showdialog
-You’ve probably heard a lot about AI, but how would you define 
+You've probably heard a lot about AI, but how would you define 
 Artificial Intelligence? One perspective is that it is an effort to 
 create something which behaves like a living thing!  
 
 ![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/pentadecathlon.gif)
 
 Strikingly, it is possible to create a game from simple rules 
-which exhibits basic features which we expect from living things. One such game is called Conway’s Game of Life!
+which exhibits basic features which we expect from living things. One such game is called Conway's Game of Life!
 
 
 ##  Introduction
 
-**Conway’s Game of Life**, and the world it creates is incredibly rich, 
-containing ‘creatures’ which can reproduce themselves, 
+**Conway's Game of Life**, and the world it creates is incredibly rich, 
+containing 'creatures' which can reproduce themselves, 
 communication and motion, unpredictable evolution, and can itself be used to 
 create an entire computer 💻! 
 
@@ -27,8 +27,8 @@ Try button **A** to pause and unpause. You can use button **B** to step through 
 
 When you're ready to continue, click into the instructions tab again!
 
-Here we see a grid of cells, colored cell is ‘alive’ and black is ‘dead’ and cells 
-next to one another can ‘see’ each other. Observe the game to see
+Here we see a grid of cells, colored cell is 'alive' and black is 'dead' and cells 
+next to one another can 'see' each other. Observe the game to see
 the rich patterns evolve in time. 
 
 ✨ Experiment by chaning the ``||Life:set initial state||`` block by clicking on grey area to produce your own intial state.
@@ -80,9 +80,9 @@ the world. Without birth, how can life continue?
 
 Nothing in life lasts forever, and so our simulation must follow this as well.
 The third rule is that any live cells not supported by neighbors will become
- dead, and that all dead cells which don’t birth a new cell stay dead. 
+ dead, and that all dead cells which don't birth a new cell stay dead. 
  
- Now let’s try turning this rule OFF by deleting the call to ``||Functions:rule three||``, which means live cells don’t die! 
+ Now let's try turning this rule OFF by deleting the call to ``||Functions:rule three||``, which means live cells don't die! 
 
 **🕹️ Play the game 🕹️**
 
@@ -228,5 +228,5 @@ conways.setInitialState(img`
 ```
 
 ```package
-arcade-conways=github:jwunderl/arcade-conways
+arcade-conways=github:jwunderl/arcade-conways#v0.0.4
 ```
