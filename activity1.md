@@ -38,6 +38,11 @@ the rich patterns evolve in time. Check out this 'striking' example which builds
 
 ✨ Experiment by changing the ``||conways:set initial state||`` block by clicking on grey box to produce your own intial state.
 
+#### ~ tutorialhint 
+
+Try drawing a 'glider' which looks like this:
+
+![Image of a glider](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/glider.png)
 
 ## Rules 📜
 
