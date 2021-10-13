@@ -37,6 +37,7 @@ the rich patterns evolve in time. Check out this 'striking' example which builds
 ![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif)
 
 ✨ Experiment by changing the ``||conways:set initial state||`` block by clicking on grey box to produce your own intial state.
+See how your initial state evolves in the game window!
 
 #### ~ tutorialhint 
 
