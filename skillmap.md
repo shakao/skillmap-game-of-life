@@ -5,7 +5,7 @@
 * bannerUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif
 * primarycolor: #8e2ec3
 * secondarycolor: #fef509
-* tertiarycolor: #000000
+* tertiarycolor: #0f0c29
 * highlightcolor: #fef509
 * completednodecolor: #5b406c
 
