@@ -1,3 +1,5 @@
+### @explicitHints true
+
 # Conway's Game of LIfe
 
 ## Artificial Intelligence @showdialog
@@ -31,15 +33,16 @@ Here we see a grid of cells, colored cell is 'alive' and black is 'dead' and cel
 next to one another can 'see' each other. Observe the game to see
 the rich patterns evolve in time. 
 
-✨ Experiment by chaning the ``||Life:set initial state||`` block by clicking on grey area to produce your own intial state.
-
 ![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif)
 
-## Rules
+✨ Experiment by changing the ``||conways:set initial state||`` block by clicking on grey area to produce your own intial state.
+
+
+## Rules 📜
 
 This world evolves in time by only **three rules** crafted to make life like behavior.
 
-In the next few steps, you will see how three rules 📜 can create life like
+In the next few steps, you will see how three rules can create life like
  evolution, and how missing any of these rules leads the simulation to break down. 
 
 
@@ -54,7 +57,9 @@ or three neighboring live cells survives to the next time. More than
 3 live neighbors means that cell may not have enough to eat or
 space to live, and so that cell does not survive.
 
-Try turning this rule OFF by deleting the call to ``||Functions:rule one||`` to see how it breaks the world! 
+Now let's try turning this rule OFF in the editor.
+
+- :paper plane: Delete the call to ``||Functions:rule one||`` to see how it breaks the world! 
 Did you expect it to break this way? Without this rule there is no death or cooperation. 
 
 **🕹️ Play the game 🕹️**
@@ -69,7 +74,9 @@ Life also creates life! The second rule for this world is that any dead cell
 which has exactly 3 live neighbors becomes alive! A small family can have 
 children, but a large family may not have enough to support more life! 
 
-Now try turning OFF by deleting the call to ``||Functions:rule two||`` this rule to see how it breaks 
+Now let's try turning this rule OFF.
+
+- :paper plane: Delete the call to ``||Functions:rule two||`` this rule to see how it breaks 
 the world. Without birth, how can life continue? 
 
 **🕹️ Play the game 🕹️**
@@ -82,11 +89,13 @@ Nothing in life lasts forever, and so our simulation must follow this as well.
 The third rule is that any live cells not supported by neighbors will become
  dead, and that all dead cells which don't birth a new cell stay dead. 
  
- Now let's try turning this rule OFF by deleting the call to ``||Functions:rule three||``, which means live cells don't die! 
+ Now let's try turning this rule OFF.
+ 
+- :paper plane: Delete the call to ``||Functions:rule three||``, which means live cells don't die! 
 
 **🕹️ Play the game 🕹️**
 
- - :paper plane: Add back the call to ``||Functions:rule two||`` block
+- :paper plane: Add back the call to ``||Functions:rule three||`` block
 
 ## Finale
 
