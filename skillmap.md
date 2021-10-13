@@ -3,6 +3,11 @@
 * description: You've probably heard a lot about AI, but how would you define Artificial Intelligence? One perspective is that it is an effort to create something which behaves like a living thing!
 * tags: ai, advanced, Challenge
 * bannerUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif
+* primarycolor: #8e2ec3
+* secondarycolor: #fef509
+* tertiarycolor: #000000
+* highlightcolor: #fef509
+* completednodecolor: #5b406c
 
 ## life
 * name: Game of life
