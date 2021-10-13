@@ -2,6 +2,7 @@
 * name: Code the Game of Life
 * description: You've probably heard a lot about AI, but how would you define Artificial Intelligence? One perspective is that it is an effort to create something which behaves like a living thing!
 * tags: ai, advanced, Challenge
+* bannerUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif
 
 ## life
 * name: Game of life
