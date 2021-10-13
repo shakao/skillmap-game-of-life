@@ -23,7 +23,7 @@
 ### life-activity3
 * name: Challenge Activity
 * type: tutorial
-* description: Filler text
+* description: Create initial states that can produce cool new patterns
 * next: life-cert
 * url: https://github.com/shakao/skillmap-game-of-life/activity3
 
