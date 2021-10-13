@@ -1,20 +1,20 @@
-# Conway's Game of LIfe
+# Conway’s Game of LIfe
 
 ## Artificial Intelligence @showdialog
-You've probably heard a lot about AI, but how would you define 
+You’ve probably heard a lot about AI, but how would you define 
 Artificial Intelligence? One perspective is that it is an effort to 
 create something which behaves like a living thing!  
 
 [TODO:Gif of the situation]
 
 Strikingly, it is possible to create a game from simple rules 
-which exhibits basic features which we expect from living things. One such game is called Conway's Game of Life!
+which exhibits basic features which we expect from living things. One such game is called Conway’s Game of Life!
 
 
 ##  Introduction
 
-**Conway's Game of Life**, and the world it creates is incredibly rich, 
-containing 'creatures' which can reproduce themselves, 
+**Conway’s Game of Life**, and the world it creates is incredibly rich, 
+containing ‘creatures’ which can reproduce themselves, 
 communication and motion, unpredictable evolution, and can itself be used to 
 create an entire computer 💻! 
 
@@ -22,22 +22,22 @@ create an entire computer 💻!
 
 ## 🕹️ Play the game
 
-Open the game window to take a look at the Game of Life evolve. Try button **A** to pause and unpause. 
-Use button **B** to step through one generation at a time. 
+Open the game window to take a look at the Game of Life and **🕹️ try it** 
 
 When you're ready to continue, click into the instructions tab again!
 
-Here we see a grid of cells, colored cell is 'alive' and black is 'dead' and cells 
-next to one another can 'see' each other. Observe the game to see
-the rich patterns evolve in time. 
+Here we see a grid of cells, black is ‘alive’ and white is ‘dead’ and cells 
+next to one another can ‘see’ each other. Observe the game to see
+the rich patterns evolve in time. Try button **A** to pause and unpause. 
+When paused you can use button **B** to step through one generation at a time. 
 
 [TODO:Gif of the situation][See a penta-decathlon, a glider and a gun which eventually hits the pentadecathlon. ]
 
 ## Rules
 
-This world evolves in time by only **three rules** 📜 crafted to make life like behavior.
+This world evolves in time by only **three rules** crafted to make life like behavior.
 
-In the next few steps, you will see how three rules can create life like
+In the next few steps, you will see how three rules 📜 can create life like
  evolution, and how missing any of these rules leads the simulation to break down. 
 
 
@@ -52,10 +52,10 @@ or three neighboring live cells survives to the next time. More than
 3 live neighbors means that cell may not have enough to eat or
 space to live, and so that cell does not survive.
 
-Try turning this rule OFF by deleting the call to ``||Functions:rule one||``  to see how it breaks the world! 
+Try turning this rule OFF by deleting the call to ``||Functions:rule one||`` to see how it breaks the world! 
 Did you expect it to break this way? Without this rule there is no death or cooperation. 
 
-**🕹️ Play the game 🕹️**
+_💡 You can use undo button in the bottom tool bar to get back to original code_
 
 ## Rule Two 👶
 
@@ -72,9 +72,9 @@ the world. Without birth, how can life continue?
 
 Nothing in life lasts forever, and so our simulation must follow this as well.
 The third rule is that any live cells not supported by neighbors will become
- dead, and that all dead cells which don't birth a new cell stay dead. 
+ dead, and that all dead cells which don’t birth a new cell stay dead. 
  
- Now let's try turning this rule off [TODO: Add code to switch off Rule 2], which means live cells don't die! 
+ Now let’s try turning this rule off [TODO: Add code to switch off Rule 2], which means live cells don’t die! 
 
 **🕹️ Play the game 🕹️**
 
@@ -90,10 +90,10 @@ main skillmap for the next tutorial.
 
 ```ghost
 conways.onGenerationUpdate(function (col, row) {
-    neighbours = countAliveNeighbours(col, row)
-    RuleOne(col, row, neighbours)
-    RuleTwo(col, row, neighbours)
-    RuleThree(col, row, neighbours)
+    neighbours = Functions.countAliveNeighbours(col, row)
+    Functions.RuleOne(col, row, neighbours)
+    Functions.RuleTwo(col, row, neighbours)
+    Functions.RuleThree(col, row, neighbours)
 
     if (conways.getState(col, row)) {
         if (neibhours == 3) {
@@ -112,16 +112,15 @@ conways.onGenerationUpdate(function (col, row) {
     if (conways.getIsDead(0, 0)) {
             conways.setState(col, row, false)
     }
-    foo()
 })
-function foo() {
-}
+
 ```
 
 ```customts
-//% block
 //% color="#1446A0"
-function RuleOne (col: number, row: number, neibhours: number) {
+namespace Functions {
+//% block
+export function RuleOne (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours == 2) {
             conways.setState(col, row, true)
@@ -131,8 +130,7 @@ function RuleOne (col: number, row: number, neibhours: number) {
     }
 }
 //% block
-//% color="#1446A0"
-function RuleTwo (col: number, row: number, neibhours: number) {
+export function RuleTwo (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row) == false) {
         if (neibhours == 3) {
             conways.setState(col, row, true)
@@ -140,8 +138,7 @@ function RuleTwo (col: number, row: number, neibhours: number) {
     }
 }
 //% block
-//% color="#1446A0"
-function RuleThree (col: number, row: number, neibhours: number) {
+export function RuleThree (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours < 2) {
             conways.setState(col, row, false)
@@ -151,8 +148,7 @@ function RuleThree (col: number, row: number, neibhours: number) {
     } 
 }
 //% block
-//% color="#1446A0"
-function countAliveNeighbours (col: number, row: number) {
+export function countAliveNeighbours (col: number, row: number) {
     let count = 0
     //Direction enum is from 0 to 7
     for (let i = 0; i < 8; i++) {
@@ -161,6 +157,7 @@ function countAliveNeighbours (col: number, row: number) {
         }
     }
     return count
+}
 }
 let paused = false;
 game.onUpdateInterval(500, function () {
@@ -181,10 +178,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ```template
 conways.onGenerationUpdate(function (col, row) {
-    let neighbours = countAliveNeighbours(col, row)
-    RuleOne(col, row, neighbours)
-    RuleTwo(col, row, neighbours)
-    RuleThree(col, row, neighbours)
+    let neighbours = Functions.countAliveNeighbours(col, row)
+    Functions.RuleOne(col, row, neighbours)
+    Functions.RuleTwo(col, row, neighbours)
+    Functions.RuleThree(col, row, neighbours)
 })
 conways.setInitialState(img`
 ........................................
