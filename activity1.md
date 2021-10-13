@@ -35,9 +35,9 @@ When paused you can use button **B** to step through one generation at a time.
 
 ## Rules
 
-This world evolves in time by only **three rules** crafted to make lifelike behavior.
+This world evolves in time by only **three rules** crafted to make life like behavior.
 
-In the next few steps, you will see how three rules 📜 can create lifelike
+In the next few steps, you will see how three rules 📜 can create life like
  evolution, and how missing any of these rules leads the simulation to break down. 
 
 
@@ -52,10 +52,14 @@ or three neighboring live cells survives to the next time. More than
 3 live neighbors means that cell may not have enough to eat or
 space to live, and so that cell does not survive.
 
-Try turning this rule OFF by [TODO: Add code to switch off] to see how it breaks the world! 
+Try turning this rule OFF by deleting the call to ``||Functions:rule one||`` to see how it breaks the world! 
 Did you expect it to break this way? Without this rule there is no death or cooperation. 
 
 **🕹️ Play the game 🕹️**
+
+- :paper plane: Add back the call to ``||Functions:rule one||`` block
+
+_💡 You can use the undo button in the bottom tool bar to get back to the original code_
 
 ## Rule Two 👶
 
@@ -63,10 +67,12 @@ Life also creates life! The second rule for this world is that any dead cell
 which has exactly 3 live neighbors becomes alive! A small family can have 
 children, but a large family may not have enough to support more life! 
 
-Now try turning OFF [TODO: Add code to switch off Rule 2] this rule to see how it breaks 
+Now try turning OFF by deleting the call to ``||Functions:rule two||`` this rule to see how it breaks 
 the world. Without birth, how can life continue? 
 
 **🕹️ Play the game 🕹️**
+
+- :paper plane: Add back the call to ``||Functions:rule two||`` block
 
 ## Rule Three ⚰️
 
@@ -74,9 +80,11 @@ Nothing in life lasts forever, and so our simulation must follow this as well.
 The third rule is that any live cells not supported by neighbors will become
  dead, and that all dead cells which don’t birth a new cell stay dead. 
  
- Now let’s try turning this rule off [TODO: Add code to switch off Rule 2], which means live cells don’t die! 
+ Now let’s try turning this rule OFF by deleting the call to ``||Functions:rule three||``, which means live cells don’t die! 
 
 **🕹️ Play the game 🕹️**
+
+ - :paper plane: Add back the call to ``||Functions:rule two||`` block
 
 ## Finale
 
@@ -90,10 +98,10 @@ main skillmap for the next tutorial.
 
 ```ghost
 conways.onGenerationUpdate(function (col, row) {
-    neighbours = countAliveNeighbours(col, row)
-    RuleOne(col, row, neighbours)
-    RuleTwo(col, row, neighbours)
-    RuleThree(col, row, neighbours)
+    neighbours = Functions.countAliveNeighbours(col, row)
+    Functions.RuleOne(col, row, neighbours)
+    Functions.RuleTwo(col, row, neighbours)
+    Functions.RuleThree(col, row, neighbours)
 
     if (conways.getState(col, row)) {
         if (neibhours == 3) {
@@ -117,8 +125,10 @@ conways.onGenerationUpdate(function (col, row) {
 ```
 
 ```customts
+//% color="#1446A0"
+namespace Functions {
 //% block
-function RuleOne (col: number, row: number, neibhours: number) {
+export function RuleOne (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours == 2) {
             conways.setState(col, row, true)
@@ -128,7 +138,7 @@ function RuleOne (col: number, row: number, neibhours: number) {
     }
 }
 //% block
-function RuleTwo (col: number, row: number, neibhours: number) {
+export function RuleTwo (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row) == false) {
         if (neibhours == 3) {
             conways.setState(col, row, true)
@@ -136,7 +146,7 @@ function RuleTwo (col: number, row: number, neibhours: number) {
     }
 }
 //% block
-function RuleThree (col: number, row: number, neibhours: number) {
+export function RuleThree (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours < 2) {
             conways.setState(col, row, false)
@@ -146,7 +156,7 @@ function RuleThree (col: number, row: number, neibhours: number) {
     } 
 }
 //% block
-function countAliveNeighbours (col: number, row: number) {
+export function countAliveNeighbours (col: number, row: number) {
     let count = 0
     //Direction enum is from 0 to 7
     for (let i = 0; i < 8; i++) {
@@ -156,6 +166,7 @@ function countAliveNeighbours (col: number, row: number) {
     }
     return count
 }
+}
 let paused = false;
 game.onUpdateInterval(500, function () {
     if (!(paused)) {
@@ -163,6 +174,9 @@ game.onUpdateInterval(500, function () {
     }
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (!paused) { 
+        paused = true;
+    }
     conways.nextGeneration()
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -172,10 +186,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ```template
 conways.onGenerationUpdate(function (col, row) {
-    let neighbours = countAliveNeighbours(col, row)
-    RuleOne(col, row, neighbours)
-    RuleTwo(col, row, neighbours)
-    RuleThree(col, row, neighbours)
+    let neighbours = Functions.countAliveNeighbours(col, row)
+    Functions.RuleOne(col, row, neighbours)
+    Functions.RuleTwo(col, row, neighbours)
+    Functions.RuleThree(col, row, neighbours)
 })
 conways.setInitialState(img`
 ........................................
@@ -212,5 +226,5 @@ conways.setInitialState(img`
 ```
 
 ```package
-arcade-conways=github:jwunderl/arcade-conways#v0.0.3
+arcade-conways=github:jwunderl/arcade-conways
 ```

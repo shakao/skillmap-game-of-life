@@ -81,8 +81,10 @@ time to see how the rules create the patterns!
 ```ghost
 let count = 0;
 let north = conways.Direction.North;
-if (conways.getState(0, 0)) {
-    if (conways.getStateInDirection(conways.Direction, 0, 0) && count < 3) {
+if (conways.getState(0, 0) || conways.getIsDead(0, 0)) {
+    if (conways.getStateInDirection(conways.Direction, 0, 0) 
+        || conways.getIsDeadInDirection(conways.Direction, 0, 0)
+        && count < 3) {
         count = count + 1;
         conways.setState(0, 0, false);
     }
@@ -143,12 +145,23 @@ conways.onGenerationUpdate(function(col: number, row: number) {
     ruleTwo(col, row, neighbors);
     ruleThree(col, row, neighbors);
 })
+```
 
-game.onUpdateInterval(500, function() {
+```customts
+let paused = false;
+game.onUpdateInterval(500, function () {
+    if (!(paused)) {
+        conways.nextGeneration()
+    }
+})
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     conways.nextGeneration()
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    paused = !(paused)
 })
 ```
 
 ```package
-arcade-conways=github:jwunderl/arcade-conways
+arcade-conways=github:jwunderl/arcade-conways#v0.0.4
 ```
