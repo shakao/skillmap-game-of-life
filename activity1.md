@@ -10,7 +10,8 @@ create something which behaves like a living thing!
 ![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/pentadecathlon.gif)
 
 Strikingly, it is possible to create a game from simple rules 
-which exhibits basic features which we expect from living things. One such game is called Conway's Game of Life!
+which exhibits basic features which we expect from living things. 
+One such game is called Conway's Game of Life! The 'breathing' pattern above is one such Game of Life pattern.
 
 
 ##  Introduction
@@ -31,7 +32,7 @@ When you're ready to continue, click into the instructions tab again!
 
 Here we see a grid of cells, colored cell are 'alive' and black cells are 'dead' and cells 
 next to one another can 'see' each other. Observe the game to see
-the rich patterns evolve in time.
+the rich patterns evolve in time. Check out this 'striking' example which builds 'gliders' which impact another cluster of living cells.
 
 ![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif)
 
