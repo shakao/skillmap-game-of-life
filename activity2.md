@@ -46,9 +46,25 @@ called!
 
 In the `||functions:ruleOne||` function, add code to
 ensure that any **currently alive cell** with 2 or 3 living 
-neighbors survives to the next generation. 
+neighbors survives to the next generation. Make sure to use 
+the `||functions:countAliveNeighbors||` function you just 
+wrote!
 
 [rule gif]
+
+#### ~ tutorialhint 
+
+```blocks
+function ruleOne(col: number, row: number, neighbors: number) {
+    if (conways.getState(col, row)) {
+        if (neighbors == 2) {
+            conways.setState(col, row, true);
+        } else if (neighbors == 3) {
+            conways.setState(col, row, true);
+        }
+    }
+}
+```
 
 ## New Cells
 

@@ -14,6 +14,7 @@
 * url: https://github.com/shakao/skillmap-game-of-life/activity1
 
 ### life-activity2
+* allowcodecarryover: false
 * name: Code the Rules
 * type: tutorial
 * description: Code your own rules
