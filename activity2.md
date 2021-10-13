@@ -1,6 +1,8 @@
+### @explicitHints true
+
 # Game of Life
 
-## Introduction
+## Introduction 🧬
 
 We saw in the previous tutorial that three rules were needed to 
 build a simulation of life which features self-replication, 
@@ -17,6 +19,15 @@ There is a function in your workspace that takes the **column**
 and **row** of a cell. Write code to return the number of alive 
 neighbors for this cell.
 
+#### ~ tutorialhint 
+
+Think about how to add up the neighbors of the cell you're at! 
+Maybe this block will help:
+
+```block
+if (conways.getStateInDirection(conways.Direction, 0, 0) {}
+```
+
 ## Adding Rules
 
 Now that we can count alive neighbors, we need to implement the 
@@ -27,9 +38,13 @@ that these rules are:
 2. Any dead cell with exactly 3 living neighbors becomes alive. 
 3. All other live cells die, and all other dead cells stay dead. 
 
+We've made a function for each of these rules. Look at the 
+`||conways:on generation [x] [y]||` block to see where they are being 
+called! 
+
 ## Surviving Cells 
 
-In the `||life:on generation [x] [y]||` block, add code to
+In the `||functions:ruleOne||` function, add code to
 ensure that any **currently alive cell** with 2 or 3 living 
 neighbors survives to the next generation. 
 
@@ -37,15 +52,17 @@ neighbors survives to the next generation.
 
 ## New Cells
 
-Next, add code so that any **currently dead cell** with exactly
-three living neighbors becomes alive.
+Next, add the `||functions:ruleTwo||` code so that any 
+**currently dead cell** with exactly three living neighbors 
+becomes alive.
 
 [rule gif]
 
-## Dying Cells
+## Dying Cells ⚰
 
-Finally, add code so that any **currently alive cell** with less 
-than two or greater than three living neighbors dies.  
+Finally, add the `||functions:ruleThree||` code so that any 
+**currently alive cell** with less than two or greater than 
+three living neighbors dies.  
 
 [rule gif]
 
@@ -53,7 +70,8 @@ than two or greater than three living neighbors dies.
 
 Life starts with something! Here we've added for you a 'glider,' 
 which is named by its ability to walk across the world in time. 
-Check it out in the simulator tab.
+
+🕹 Check it out in the simulator tab. 🕹
 
 Add in more blocks, try an oscillator, a 'gun', and more, and click 
 "play" to see the evolution. Try pausing and moving one step at a 
@@ -62,26 +80,75 @@ time to see how the rules create the patterns!
 
 ```ghost
 let count = 0;
-let north = life.direction();
-if (life.getIsAlive(0, 0)) {
-    if (life.getIsAliveDirection(life.Direction.North, 0, 0) && count < 3) {
+let north = conways.Direction.North;
+if (conways.getState(0, 0)) {
+    if (conways.getStateInDirection(conways.Direction, 0, 0) && count < 3) {
         count = count + 1;
-        life.setIsAlive(true, 0, 0)
+        conways.setState(0, 0, false);
     }
 }
 let directions = [];
 ```
 
 ```template
-function countAliveNeighbors(x: number, y: number) {
+conways.setInitialState(img`
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+......111.........111.........111.......
+.......1...........1...........1........
+.......1...........1...........1........
+......111.........111.........111.......
+........................................
+......111.........111.........111.......
+......111.........111.........111.......
+........................................
+......111.........111.........111.......
+.......1...........1...........1........
+.......1...........1...........1........
+......111.........111.........111.......
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+........................................
+`)
 
+function countAliveNeighbors(col: number, row: number) {
+    return 0;
 }
 
-game.onUpdate(function () {
-	
+function ruleOne(col: number, row: number, neighbors: number) {
+}
+
+function ruleTwo(col: number, row: number, neighbors: number) {
+}
+
+function ruleThree(col: number, row: number, neighbors: number) {
+}
+
+conways.onGenerationUpdate(function(col: number, row: number) {
+    let neighbors = countAliveNeighbors(col, row);
+    ruleOne(col, row, neighbors);
+    ruleTwo(col, row, neighbors);
+    ruleThree(col, row, neighbors);
+})
+
+game.onUpdateInterval(500, function() {
+    conways.nextGeneration()
 })
 ```
 
 ```package
-game-of-life-fake=github:shakao-test/game-of-life-fake#v0.0.2
+arcade-conways=github:jwunderl/arcade-conways
 ```
