@@ -163,6 +163,9 @@ game.onUpdateInterval(500, function () {
     }
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (!paused) { 
+        paused = true;
+    }
     conways.nextGeneration()
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -212,5 +215,5 @@ conways.setInitialState(img`
 ```
 
 ```package
-arcade-conways=github:jwunderl/arcade-conways#v0.0.3
+arcade-conways=github:jwunderl/arcade-conways#v0.0.4
 ```
