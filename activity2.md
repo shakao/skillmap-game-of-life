@@ -1,39 +1,64 @@
-# Game of Life Rules
+# Game of Life
 
-## Step 1
-To begin with, look at the game in the simulator.  
+## Introduction
 
-Notice that the population is as placed. To see what will come of the 
-population, we need to introduce the concept of time to this population 
-to view the future generations. 
+We saw in the previous tutorial that three rules were needed to 
+build a simulation of life which features self-replication, 
+communication and motion, and chaotic unpredictable patterns. 
 
-## Step 2
-The first rule that we'll be introducing is that **any live cell with two
-or three live neighbors survives**.
+These rules all basically require looking at each cell and 
+counting how many live neighbors that cell has. 
 
-[Gif of the situation]
+Let's begin by writing code which counts alive neighbors! 
 
-## Step 3
+## Counting Neighbors
 
-The first step is to figure out how many neighbors around a cell are alive.
-We've provided a function called "countAliveNeighbors" that takes in the 
-column and row of a cell. Write code to return the number of neighbors 
-that are alive. 
+There is a function in your workspace that takes the **column** 
+and **row** of a cell. Write code to return the number of alive 
+neighbors for this cell.
 
-[maybe add block that is "for each direction"]
+## Adding Rules
 
-## Step 4 
+Now that we can count alive neighbors, we need to implement the 
+three rules of Conway's Game of Life! We saw in the last tutorial 
+that these rules are: 
 
-Now use your function! In the "run generation" event, write the first rule:
-if a cell has two or three alive neighbors, it will survive.
+1. Any live cell with 2 OR 3 living neighbors survives. 
+2. Any dead cell with exactly 3 living neighbors becomes alive. 
+3. All other live cells die, and all other dead cells stay dead. 
 
-## Step 5 
+## Surviving Cells 
 
-Otherwise, the cell dies 
+In the `||life:on generation [x] [y]||` block, add code to
+ensure that any **currently alive cell** with 2 or 3 living 
+neighbors survives to the next generation. 
 
-## Step 6 
+[rule gif]
 
-If a dead cell, has exactly 3 alive neighbors, it becomes alive. 
+## New Cells
+
+Next, add code so that any **currently dead cell** with exactly
+three living neighbors becomes alive.
+
+[rule gif]
+
+## Dying Cells
+
+Finally, add code so that any **currently alive cell** with less 
+than two or greater than three living neighbors dies.  
+
+[rule gif]
+
+## Play the Game! 
+
+Life starts with something! Here we've added for you a 'glider,' 
+which is named by its ability to walk across the world in time. 
+Check it out in the simulator tab.
+
+Add in more blocks, try an oscillator, a 'gun', and more, and click 
+"play" to see the evolution. Try pausing and moving one step at a 
+time to see how the rules create the patterns! 
+
 
 ```ghost
 let count = 0;
