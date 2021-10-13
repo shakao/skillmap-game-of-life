@@ -7,7 +7,7 @@ We saw in the previous tutorial about how the rules play a vital part in the Gam
 of Life. In this tutorial, let's take a look at how the initial life states produce
 the rich patterns that emerge over time. 
 
-[Insert GIF for cool pattern]
+![Alt txt](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif )
 
 ## Still Life Pattern
 Can you find an initial state that stays **fixed** over time? ✋
