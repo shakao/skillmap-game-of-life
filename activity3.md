@@ -3,9 +3,9 @@
 # Conway's Game of Life Challenge Activity
 
 ## Introduction
-We saw in the previous tutorial about how the rules play a vital part in the Game
-of Life. In this tutorial, let's take a look at how the initial life states produce
-the rich patterns that emerge over time. 
+We saw in the previous tutorial that the **three rules** are very important for the Game
+of Life to behave in a life-life fashion. In this tutorial, let's take a look at how the initial life states produce
+the rich patterns that emerge over time.
 
 ![Alt txt](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif )
 
@@ -43,7 +43,7 @@ Example oscillator pattern
 ![Alt txt](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/oscillator.png)
 
 ## Spaceship Pattern
-Can you find an initial state that **translates itself across the grid** over time?
+Can you find an initial state that **moves itself across the grid** over time?
 - :paper plane: From the ``||conways:Life||`` category, modify the
 ``||conways:set initial state [] ||`` to put in an initial state.
 - :paper plane: Use the editor to draw a pattern that would be able to move across
