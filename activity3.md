@@ -101,7 +101,7 @@ conways.setInitialState(img`
 `)
 
 function countAliveNeighbors(col: number, row: number) {
-    let count = 0
+    let count = -0
     if (conways.getStateInDirection(conways.Direction.North, col, row)) {
         count += 1;
     }
