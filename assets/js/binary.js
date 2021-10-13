@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.6.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.2","target":"arcade","targetVersion":"1.6.24","repo":"shakao/skillmap-game-of-life"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.6.24/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.3","target":"arcade","targetVersion":"1.6.24","repo":"shakao/skillmap-game-of-life"}
 // total=1140001 new=5.53% cached=88.84% other=5.63%
 (function (ectx) {
 'use strict';
