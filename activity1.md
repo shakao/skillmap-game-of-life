@@ -22,22 +22,22 @@ create an entire computer 💻!
 
 ## 🕹️ Play the game
 
-Open the game window to take a look at the Game of Life and **🕹️ try it** 
+Open the game window to take a look at the Game of Life evolve. Try button **A** to pause and unpause. 
+Use button **B** to step through one generation at a time. 
 
 When you're ready to continue, click into the instructions tab again!
 
-Here we see a grid of cells, black is 'alive' and white is 'dead' and cells 
+Here we see a grid of cells, colored cell is 'alive' and black is 'dead' and cells 
 next to one another can 'see' each other. Observe the game to see
-the rich patterns evolve in time. Try button **A** to pause and unpause. 
-When paused you can use button **B** to step through one generation at a time. 
+the rich patterns evolve in time. 
 
 [TODO:Gif of the situation][See a penta-decathlon, a glider and a gun which eventually hits the pentadecathlon. ]
 
 ## Rules
 
-This world evolves in time by only **three rules** crafted to make lifelike behavior.
+This world evolves in time by only **three rules** 📜 crafted to make life like behavior.
 
-In the next few steps, you will see how three rules 📜 can create lifelike
+In the next few steps, you will see how three rules can create life like
  evolution, and how missing any of these rules leads the simulation to break down. 
 
 
@@ -52,7 +52,7 @@ or three neighboring live cells survives to the next time. More than
 3 live neighbors means that cell may not have enough to eat or
 space to live, and so that cell does not survive.
 
-Try turning this rule OFF by [TODO: Add code to switch off] to see how it breaks the world! 
+Try turning this rule OFF by deleting the call to ``||Functions:rule one||``  to see how it breaks the world! 
 Did you expect it to break this way? Without this rule there is no death or cooperation. 
 
 **🕹️ Play the game 🕹️**
@@ -112,12 +112,15 @@ conways.onGenerationUpdate(function (col, row) {
     if (conways.getIsDead(0, 0)) {
             conways.setState(col, row, false)
     }
+    foo()
 })
-
+function foo() {
+}
 ```
 
 ```customts
 //% block
+//% color="#1446A0"
 function RuleOne (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours == 2) {
@@ -128,6 +131,7 @@ function RuleOne (col: number, row: number, neibhours: number) {
     }
 }
 //% block
+//% color="#1446A0"
 function RuleTwo (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row) == false) {
         if (neibhours == 3) {
@@ -136,6 +140,7 @@ function RuleTwo (col: number, row: number, neibhours: number) {
     }
 }
 //% block
+//% color="#1446A0"
 function RuleThree (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours < 2) {
@@ -146,6 +151,7 @@ function RuleThree (col: number, row: number, neibhours: number) {
     } 
 }
 //% block
+//% color="#1446A0"
 function countAliveNeighbours (col: number, row: number) {
     let count = 0
     //Direction enum is from 0 to 7
