@@ -11,8 +11,8 @@ the rich patterns that emerge over time.
 
 ## Still Life Pattern
 Can you find an initial state that stays **fixed** over time? ✋
-- :paper plane: From the ``||arcade-conways:Life||`` category, modify the
-``||set initial state [] ||`` to put in an initial state.
+- :paper plane: From the ``||conways:Life||`` category, modify the
+``||conways:set initial state [] ||`` to put in an initial state.
 - :paper plane: Use the editor to draw a pattern that would stay fixed over time.
 - :paper plane: Now, go over to the game window to see 
 the simulation in action for the progression of the future generations.
@@ -29,8 +29,8 @@ Can you find an initial state that **oscillates** over time? 👆👇👆
 
 _An oscillating pattern is one that comes back to its initial
 state after a number of iterations._
-- :paper plane: From the ``||arcade-conways:Life||`` category, modify the
-``||set initial state [] ||`` to put in an initial state.
+- :paper plane: From the ``||conways:Life||`` category, modify the
+``||conways:set initial state [] ||`` to put in an initial state.
 - :paper plane: Use the editor to draw an initial state that would lead to oscillations.
 - :paper plane: Now, go over to the game window to see 
 the simulation in action for the progression of the future generations.
