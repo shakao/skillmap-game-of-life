@@ -17,7 +17,7 @@ which exhibits basic features which we expect from living things. One such game 
 
 **Conway's Game of Life**, and the world it creates is incredibly rich, 
 containing 'creatures' which can reproduce themselves, 
-communication and motion, unpredictable evolution, and can itself be used to 
+communicate and move, unpredictably evolve. The Game of Life can itself be used to 
 create an entire computer 💻! 
 
 - :mouse pointer: When you're ready to move on to the next set of instructions, click **Next**.
@@ -25,13 +25,13 @@ create an entire computer 💻!
 ## 🕹️ Play the game
 
 Open the game window to take a look at the Game of Life and **🕹️ try it**.
-Try button **A** to pause and unpause. You can use button **B** to step through one generation at a time. 
+Try button **A** to pause and unpause. You can use button **B** to advance one step at a time.
 
 When you're ready to continue, click into the instructions tab again!
 
-Here we see a grid of cells, colored cell is 'alive' and black is 'dead' and cells 
+Here we see a grid of cells, colored cell are 'alive' and black cells are 'dead' and cells 
 next to one another can 'see' each other. Observe the game to see
-the rich patterns evolve in time. 
+the rich patterns evolve in time.
 
 ![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif)
 
@@ -40,10 +40,10 @@ the rich patterns evolve in time.
 
 ## Rules 📜
 
-This world evolves in time by only **three rules** crafted to make life like behavior.
+This world evolves in time by only **three rules** crafted to make life-like behavior.
 
-In the next few steps, you will see how three rules can create life like
- evolution, and how missing any of these rules leads the simulation to break down. 
+In the next few steps, you will see how **three rules** can create life-like 
+evolution, and how missing any of these rules leads the simulation to break down. 
 
 
 ## Rule One 👪
@@ -52,15 +52,15 @@ We expect that life 🌱 needs life around it to survive. Humans need plants
 and plants need soil and so on. However too much life will leave 
 some creatures without enough to eat 🥣. 
 
-So the first rule is that after one generation of time, any live cell with two 
-or three neighboring live cells survives to the next time. More than 
-3 live neighbors means that cell may not have enough to eat or
+So the first rule is that after one generation of time, any live cell with **two 
+or three neighboring live cells** survives to the next time. **More than 
+3 live neighbors** means that cell may not have enough to eat or
 space to live, and so that cell does not survive.
 
 Now let's try turning this rule OFF in the editor.
 
 - :paper plane: Delete the call to ``||Functions:rule one||`` to see how it breaks the world! 
-Did you expect it to break this way? Without this rule there is no death or cooperation. 
+Did you expect it to break this way? Without this rule there is no death or cooperation.
 
 **🕹️ Play the game 🕹️**
 
@@ -71,13 +71,13 @@ _💡 You can use the undo button in the bottom tool bar to get back to the orig
 ## Rule Two 👶
 
 Life also creates life! The second rule for this world is that any dead cell 
-which has exactly 3 live neighbors becomes alive! A small family can have 
-children, but a large family may not have enough to support more life! 
+which has **exactly 3 live neighbors** becomes alive! A small family can have 
+children, but a large family may not have enough food to support more life! 
 
 Now let's try turning this rule OFF.
 
 - :paper plane: Delete the call to ``||Functions:rule two||`` this rule to see how it breaks 
-the world. Without birth, how can life continue? 
+the world. Without birth, how can life continue?
 
 **🕹️ Play the game 🕹️**
 
