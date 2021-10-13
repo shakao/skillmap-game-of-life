@@ -22,14 +22,16 @@ create an entire computer 💻!
 
 ## 🕹️ Play the game
 
-Open the game window to take a look at the Game of Life and **🕹️ try it** 
+Open the game window to take a look at the Game of Life and **🕹️ try it**.
+Try button **A** to pause and unpause. You can use button **B** to step through one generation at a time. 
 
 When you're ready to continue, click into the instructions tab again!
 
-Here we see a grid of cells, black is ‘alive’ and white is ‘dead’ and cells 
+Here we see a grid of cells, colored cell is ‘alive’ and black is ‘dead’ and cells 
 next to one another can ‘see’ each other. Observe the game to see
-the rich patterns evolve in time. Try button **A** to pause and unpause. 
-When paused you can use button **B** to step through one generation at a time. 
+the rich patterns evolve in time. 
+
+✨ Experiment by chaning the ``||Life:set initial state||`` block by clicking on grey area to produce your own intial state.
 
 [TODO:Gif of the situation][See a penta-decathlon, a glider and a gun which eventually hits the pentadecathlon. ]
 
