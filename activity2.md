@@ -4,20 +4,20 @@
 
 ## Introduction 🧬
 
-We saw in the previous tutorial that three rules were needed to 
-build a simulation of life which features self-replication, 
-communication and motion, and chaotic unpredictable patterns. 
+We saw in the previous tutorial that **three rules** were needed to 
+build a simulation of (intelligent?) life which features self-replication, 
+communication and motion, and chaotic, unpredictable patterns.
 
 These rules all basically require looking at each cell and 
-counting how many live neighbors that cell has. 
+counting the number of live neighbors of that cell.
 
-Let's begin by writing code which counts alive neighbors! 
+Let's begin by writing code which counts live neighbors!
 
 ## Counting Neighbors
 
 There is a function in your workspace that takes the **column** 
 and **row** of a cell. Write code to return the number of alive 
-neighbors for this cell.
+neighbors for this cell. Note that each cell has **8 neighboring cells** (corners count!).
 
 #### ~ tutorialhint 
 
@@ -37,8 +37,8 @@ Now that we can count alive neighbors, we need to implement the
 three rules of Conway's Game of Life! We saw in the last tutorial 
 that these rules are: 
 
-1. Any live cell with 2 OR 3 living neighbors survives. 
-2. Any dead cell with exactly 3 living neighbors becomes alive. 
+1. Any live cell with **2 OR 3 living neighbors survives**. 
+2. Any dead cell with **exactly 3 living neighbors becomes alive**. 
 3. All other live cells die, and all other dead cells stay dead. 
 
 We've made a function for each of these rules. Look at the 
@@ -48,8 +48,8 @@ called!
 ## Surviving Cells 
 
 In the `||functions:ruleOne||` function, add code to
-ensure that any **currently alive cell** with 2 or 3 living 
-neighbors survives to the next generation. Make sure to use 
+ensure that any **currently alive cell with 2 or 3 living 
+neighbors** survives to the next generation. Make sure to use 
 the `||variables:neighbors||` variable!
 
 ![Living cells with two or three living neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule1.png)
@@ -73,8 +73,8 @@ function ruleOne(col: number, row: number, neighbors: number) {
 ## New Cells
 
 Next, add the `||functions:ruleTwo||` code so that any 
-**currently dead cell** with exactly three living neighbors 
-becomes alive.
+**currently dead cell with exactly three living neighbors 
+becomes alive.**
 
 ![Dead cells with three living neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule2.png)
 
@@ -93,8 +93,8 @@ if (conways.getIsDead(0, 0)) { }
 ## Dying Cells ⚰
 
 Finally, add the `||functions:ruleThree||` code so that any 
-**currently alive cell** with less than two or greater than 
-three living neighbors dies.  
+**currently alive cell with less than two or greater than 
+three living neighbors dies.**
 
 ![Alive cells with one and four neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule3.png)
 
