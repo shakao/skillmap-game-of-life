@@ -218,5 +218,5 @@ conways.setInitialState(img`
 ```
 
 ```package
-arcade-conways=github:jwunderl/arcade-conways#v0.0.4
+arcade-conways=github:jwunderl/arcade-conways
 ```
