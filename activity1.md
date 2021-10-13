@@ -5,7 +5,7 @@ You’ve probably heard a lot about AI, but how would you define
 Artificial Intelligence? One perspective is that it is an effort to 
 create something which behaves like a living thing!  
 
-[TODO:Gif of the situation]
+![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/pentadecathlon.gif)
 
 Strikingly, it is possible to create a game from simple rules 
 which exhibits basic features which we expect from living things. One such game is called Conway’s Game of Life!
@@ -31,7 +31,7 @@ next to one another can ‘see’ each other. Observe the game to see
 the rich patterns evolve in time. Try button **A** to pause and unpause. 
 When paused you can use button **B** to step through one generation at a time. 
 
-[TODO:Gif of the situation][See a penta-decathlon, a glider and a gun which eventually hits the pentadecathlon. ]
+![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/gospers-penta.gif)
 
 ## Rules
 
