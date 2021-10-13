@@ -1,20 +1,20 @@
-# Conway’s Game of LIfe
+# Conway's Game of LIfe
 
 ## Artificial Intelligence @showdialog
-You’ve probably heard a lot about AI, but how would you define 
+You've probably heard a lot about AI, but how would you define 
 Artificial Intelligence? One perspective is that it is an effort to 
 create something which behaves like a living thing!  
 
 [TODO:Gif of the situation]
 
 Strikingly, it is possible to create a game from simple rules 
-which exhibits basic features which we expect from living things. One such game is called Conway’s Game of Life!
+which exhibits basic features which we expect from living things. One such game is called Conway's Game of Life!
 
 
 ##  Introduction
 
-**Conway’s Game of Life**, and the world it creates is incredibly rich, 
-containing ‘creatures’ which can reproduce themselves, 
+**Conway's Game of Life**, and the world it creates is incredibly rich, 
+containing 'creatures' which can reproduce themselves, 
 communication and motion, unpredictable evolution, and can itself be used to 
 create an entire computer 💻! 
 
@@ -26,8 +26,8 @@ Open the game window to take a look at the Game of Life and **🕹️ try it**
 
 When you're ready to continue, click into the instructions tab again!
 
-Here we see a grid of cells, black is ‘alive’ and white is ‘dead’ and cells 
-next to one another can ‘see’ each other. Observe the game to see
+Here we see a grid of cells, black is 'alive' and white is 'dead' and cells 
+next to one another can 'see' each other. Observe the game to see
 the rich patterns evolve in time. Try button **A** to pause and unpause. 
 When paused you can use button **B** to step through one generation at a time. 
 
@@ -72,9 +72,9 @@ the world. Without birth, how can life continue?
 
 Nothing in life lasts forever, and so our simulation must follow this as well.
 The third rule is that any live cells not supported by neighbors will become
- dead, and that all dead cells which don’t birth a new cell stay dead. 
+ dead, and that all dead cells which don't birth a new cell stay dead. 
  
- Now let’s try turning this rule off [TODO: Add code to switch off Rule 2], which means live cells don’t die! 
+ Now let's try turning this rule off [TODO: Add code to switch off Rule 2], which means live cells don't die! 
 
 **🕹️ Play the game 🕹️**
 
