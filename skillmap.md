@@ -4,19 +4,19 @@
 * tags: ai, advanced, Challenge
 
 ## life
-* name: Design a Space Explorer
+* name: Game of life
 
 ### life-activity1
-* name: Play the Game of Life
+* name: Simulation of Game of Life
 * type: tutorial
-* description: Filler text
+* description: Understand and see the game of life simulation and alter the rules
 * next: life-activity2
 * url: https://github.com/shakao/skillmap-game-of-life/activity1
 
 ### life-activity2
-* name: Code the Game
+* name: Code the Rules
 * type: tutorial
-* description: Filler text
+* description: Code your own rules
 * next: life-activity3
 * url: https://github.com/shakao/skillmap-game-of-life/activity2
 
