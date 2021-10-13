@@ -67,8 +67,10 @@ When you're done playing your game, click **Done** to return to the
 main skillmap. Congrats!
 
 ```customts
+//% color="#1446A0"
+namespace Functions {
 //% block
-function RuleOne (col: number, row: number, neibhours: number) {
+export function RuleOne (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours == 2) {
             conways.setState(col, row, true)
@@ -78,7 +80,7 @@ function RuleOne (col: number, row: number, neibhours: number) {
     }
 }
 //% block
-function RuleTwo (col: number, row: number, neibhours: number) {
+export function RuleTwo (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row) == false) {
         if (neibhours == 3) {
             conways.setState(col, row, true)
@@ -86,7 +88,7 @@ function RuleTwo (col: number, row: number, neibhours: number) {
     }
 }
 //% block
-function RuleThree (col: number, row: number, neibhours: number) {
+export function RuleThree (col: number, row: number, neibhours: number) {
     if (conways.getState(col, row)) {
         if (neibhours < 2) {
             conways.setState(col, row, false)
@@ -96,7 +98,7 @@ function RuleThree (col: number, row: number, neibhours: number) {
     } 
 }
 //% block
-function countAliveNeighbours (col: number, row: number) {
+export function countAliveNeighbours (col: number, row: number) {
     let count = 0
     //Direction enum is from 0 to 7
     for (let i = 0; i < 8; i++) {
@@ -106,6 +108,7 @@ function countAliveNeighbours (col: number, row: number) {
     }
     return count
 }
+}
 let paused = false;
 game.onUpdateInterval(500, function () {
     if (!(paused)) {
@@ -113,6 +116,9 @@ game.onUpdateInterval(500, function () {
     }
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (!paused) { 
+        paused = true;
+    }
     conways.nextGeneration()
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
