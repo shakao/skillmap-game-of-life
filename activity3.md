@@ -22,7 +22,7 @@ Is the initial population staying still?
 
 Example still life pattern
 
-![Alt txt](https://image)
+![Alt txt](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/stillLife.png)
 
 ## Oscillator Pattern
 Can you find an initial state that **oscillates** over time? 👆👇👆
@@ -34,7 +34,13 @@ state after a number of iterations._
 - :paper plane: Use the editor to draw an initial state that would lead to oscillations.
 - :paper plane: Now, go over to the game window to see 
 the simulation in action for the progression of the future generations.
-Does it come back to the initial state after a number of generations?
+Does it come back to same state as the initial state after a number of generations?
+
+#### ~ tutorialhint
+
+Example oscillator pattern
+
+![Alt txt](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/oscillator.png)
 
 ## Spaceship Pattern
 Can you find an initial state that **translates itself across the grid** over time?
@@ -45,6 +51,12 @@ the grid over time.
 - :paper plane: Now, go over to the game window to see 
 the simulation in action for the progression of the future generations.
 Does it continue moving across the grid?
+
+#### ~ tutorialhint
+
+Example spaceship pattern
+
+![Alt txt](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/glider.png)
 
 ## Grand Finale
 You've done it! You've experienced Conway's Game of Life through this simulation
