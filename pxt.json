@@ -1,6 +1,6 @@
 {
     "name": "skillmap-game-of-life",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "description": "",
     "dependencies": {
         "device": "*"
