@@ -12,6 +12,7 @@
 * type: tutorial
 * description: Understand and see the game of life simulation and alter the rules
 * next: life-activity2
+* imageUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/task1-preview.gif
 * url: https://github.com/shakao/skillmap-game-of-life/activity1
 
 ### life-activity2
@@ -20,6 +21,7 @@
 * type: tutorial
 * description: Code your own rules
 * next: life-activity3
+* imageUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/task2-preview.gif
 * url: https://github.com/shakao/skillmap-game-of-life/activity2
 
 ### life-activity3
@@ -27,6 +29,7 @@
 * type: tutorial
 * description: Create initial states that can produce cool new patterns
 * next: life-cert
+* imageUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/task3-preview.gif
 * url: https://github.com/shakao/skillmap-game-of-life/activity3
 
 ### life-cert
