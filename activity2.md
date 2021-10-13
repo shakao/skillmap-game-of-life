@@ -181,7 +181,7 @@ conways.onGenerationUpdate(function(col: number, row: number) {
 
 ```customts
 let paused = false;
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(100, function () {
     if (!(paused)) {
         conways.nextGeneration()
     }
