@@ -89,27 +89,84 @@ main skillmap for the next tutorial.
 
 
 ```ghost
-let count = 0;
-let north = life.direction();
-if (life.getIsAlive(0, 0)) {
-    if (life.getIsAliveDirection(life.Direction.North, 0, 0) && count < 3) {
-        count = count + 1;
-        life.setIsAlive(true, 0, 0)
+conways.onGenerationUpdate(function (col, row) {
+    neighbours = countAliveNeighbours(col, row)
+    RuleOne(col, row, neighbours)
+    RuleTwo(col, row, neighbours)
+    RuleThree(col, row, neighbours)
+
+    if (conways.getState(col, row)) {
+        if (neibhours == 3) {
+            conways.setState(col, row, false)
+        }
+    }
+    if (conways.getIsDeadInDirection(conways.Direction, 0, 0)) {
+            conways.setState(col, row, false)
+    }
+    if (conways.getStateInDirection(conways.Direction, 0, 0)) {
+                conways.setState(col, row, false)
+    }
+    if (conways.getState(0, 0)) {
+                conways.setState(col, row, false)
+    }
+    if (conways.getIsDead(0, 0)) {
+            conways.setState(col, row, false)
+    }
+})
+
+```
+
+```customts
+//% block
+function RuleOne (col: number, row: number, neibhours: number) {
+    if (conways.getState(col, row)) {
+        if (neibhours == 2) {
+            conways.setState(col, row, true)
+        } else if (neibhours == 3) {
+            conways.setState(col, row, true)
+        }
     }
 }
-let directions = [];
+//% block
+function RuleTwo (col: number, row: number, neibhours: number) {
+    if (conways.getState(col, row) == false) {
+        if (neibhours == 3) {
+            conways.setState(col, row, false)
+        }
+    }
+}
+//% block
+function RuleThree (col: number, row: number, neibhours: number) {
+    if (conways.getState(col, row)) {
+        if (neibhours < 2) {
+            conways.setState(col, row, false)
+        } else if (neibhours > 3) {
+            conways.setState(col, row, false)
+        }
+    }
+}
+//% block
+function countAliveNeighbours (col: number, row: number) {
+    let count = 0
+    //Direction enum is from 0 to 7
+    for (let i = 0; i < 8; i++) {
+        if (conways.getStateInDirection(i, col, row)) {
+            count += 1
+        }
+    }
+    return count
+}
 ```
 
 ```template
-function countAliveNeighbors(x: number, y: number) {
-
-}
-
-game.onUpdate(function () {
-	
+conways.onGenerationUpdate(function (col, row) {
+    let neighbours = countAliveNeighbours(col, row)
+    RuleOne(col, row, neighbours)
+    RuleTwo(col, row, neighbours)
+    RuleThree(col, row, neighbours)
 })
 ```
 
 ```package
-game-of-life-fake=github:shakao-test/game-of-life-fake#v0.0.2
+arcade-conways=github:jwunderl/arcade-conways#v0.0.3
 ```
