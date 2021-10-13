@@ -52,7 +52,7 @@ ensure that any **currently alive cell** with 2 or 3 living
 neighbors survives to the next generation. Make sure to use 
 the `||variables:neighbors||` variable!
 
-![Living cells with two or three living neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule1.gif)
+![Living cells with two or three living neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule1.png)
 
 The two **pink** cells above will survive to the next generation.
 
@@ -76,7 +76,7 @@ Next, add the `||functions:ruleTwo||` code so that any
 **currently dead cell** with exactly three living neighbors 
 becomes alive.
 
-![Dead cells with three living neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule2.gif)
+![Dead cells with three living neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule2.png)
 
 The two dead cells highlighted in **yellow** will become 
 alive in the next generation.
@@ -96,7 +96,7 @@ Finally, add the `||functions:ruleThree||` code so that any
 **currently alive cell** with less than two or greater than 
 three living neighbors dies.  
 
-![Alive cells with one and four neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule3.gif)
+![Alive cells with one and four neighbors](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/rule3.png)
 
 The two **red** cells will die in the next generation.
 
