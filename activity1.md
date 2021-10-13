@@ -55,7 +55,11 @@ space to live, and so that cell does not survive.
 Try turning this rule OFF by deleting the call to ``||Functions:rule one||`` to see how it breaks the world! 
 Did you expect it to break this way? Without this rule there is no death or cooperation. 
 
-_💡 You can use undo button in the bottom tool bar to get back to original code_
+**🕹️ Play the game 🕹️**
+
+- :paper plane: Add back the call to ``||Functions:rule one||`` block
+
+_💡 You can use the undo button in the bottom tool bar to get back to the original code_
 
 ## Rule Two 👶
 
@@ -63,10 +67,12 @@ Life also creates life! The second rule for this world is that any dead cell
 which has exactly 3 live neighbors becomes alive! A small family can have 
 children, but a large family may not have enough to support more life! 
 
-Now try turning OFF [TODO: Add code to switch off Rule 2] this rule to see how it breaks 
+Now try turning OFF by deleting the call to ``||Functions:rule two||`` this rule to see how it breaks 
 the world. Without birth, how can life continue? 
 
 **🕹️ Play the game 🕹️**
+
+- :paper plane: Add back the call to ``||Functions:rule two||`` block
 
 ## Rule Three ⚰️
 
@@ -74,9 +80,11 @@ Nothing in life lasts forever, and so our simulation must follow this as well.
 The third rule is that any live cells not supported by neighbors will become
  dead, and that all dead cells which don’t birth a new cell stay dead. 
  
- Now let’s try turning this rule off [TODO: Add code to switch off Rule 2], which means live cells don’t die! 
+ Now let’s try turning this rule OFF by deleting the call to ``||Functions:rule three||``, which means live cells don’t die! 
 
 **🕹️ Play the game 🕹️**
+
+ - :paper plane: Add back the call to ``||Functions:rule two||`` block
 
 ## Finale
 
