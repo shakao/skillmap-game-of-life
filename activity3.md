@@ -44,8 +44,8 @@ Example oscillator pattern
 
 ## Spaceship Pattern
 Can you find an initial state that **translates itself across the grid** over time?
-- :paper plane: From the ``||life:Life||`` category, modify the
-``||set initial state [] ||`` to put in an initial state.
+- :paper plane: From the ``||conways:Life||`` category, modify the
+``||conways:set initial state [] ||`` to put in an initial state.
 - :paper plane: Use the editor to draw a pattern that would be able to move across
 the grid over time.
 - :paper plane: Now, go over to the game window to see 
