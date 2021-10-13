@@ -209,7 +209,7 @@ export function countAliveNeighbours (col: number, row: number) {
 }
 }
 let paused = false;
-game.onUpdateInterval(500, function () {
+game.onUpdateInterval(100, function () {
     if (!(paused)) {
         conways.nextGeneration()
     }
