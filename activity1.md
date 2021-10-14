@@ -1,6 +1,6 @@
 ### @explicitHints true
 
-# Conway's Game of LIfe
+# Conway's Game of Life
 
 ## Artificial Intelligence @showdialog
 You've probably heard a lot about AI, but how would you define 
