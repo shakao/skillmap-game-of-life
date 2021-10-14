@@ -4,6 +4,8 @@
 
 ## Introduction 🧬
 
+![Gif of evolution of multiple Methuselahs](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/complex-life.gif)
+
 We saw in the previous tutorial that **three rules** were needed to 
 build a simulation of (intelligent?) life which features self-replication, 
 communication and motion, and chaotic, unpredictable patterns.
