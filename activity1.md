@@ -7,7 +7,7 @@ You've probably heard a lot about AI, but how would you define
 Artificial Intelligence? One perspective is that it is an effort to 
 create something which behaves like a living thing!  
 
-![Gif of multiple pentadecathlon patterns in game of life](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/complex-life.gif)
+![Gif of evolution of multiple Methuselahs](https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/complex-life.gif)
 
 Strikingly, it is possible to create a game from simple rules 
 which exhibits basic features which we expect from living things. 
