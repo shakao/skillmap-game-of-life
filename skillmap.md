@@ -10,10 +10,10 @@
 * completednodecolor: #5b406c
 
 ## life
-* name: Game of life
+* name: Game of Life
 
 ### life-activity1
-* name: Simulation of Game of Life
+* name: Simulation
 * type: tutorial
 * description: Understand and see the game of life simulation and alter the rules
 * next: life-activity2
@@ -24,7 +24,7 @@
 * allowcodecarryover: false
 * name: Code the Rules
 * type: tutorial
-* description: Code your own rules
+* description: Code your own rules and see the simulation come to life
 * next: life-activity3
 * imageUrl: https://raw.githubusercontent.com/shakao/skillmap-game-of-life/master/images/task2-preview.gif
 * url: https://github.com/shakao/skillmap-game-of-life/activity2
