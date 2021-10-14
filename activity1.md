@@ -145,8 +145,12 @@ conways.onGenerationUpdate(function (col, row) {
 ```customts
 //% color="#1446A0"
 namespace Functions {
+
+export let ruleOneRan = false;
+
 //% block
 export function RuleOne (col: number, row: number, neibhours: number) {
+    ruleOneRan = true;
     if (conways.getState(col, row)) {
         if (neibhours == 2) {
             conways.setState(col, row, true)
@@ -172,6 +176,17 @@ export function RuleThree (col: number, row: number, neibhours: number) {
             conways.setState(col, row, false)
         }
     } 
+    if (!ruleOneRan) {
+        // do opposite of Rule1
+        if (conways.getState(col, row)) {
+            if (neibhours == 2) {
+                conways.setState(col, row, false)
+            } else if (neibhours == 3) {
+                conways.setState(col, row, false)
+            }
+        }
+    }
+    ruleOneRan=false;
 }
 //% block
 export function countAliveNeighbours (col: number, row: number) {
