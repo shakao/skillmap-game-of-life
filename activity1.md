@@ -185,8 +185,8 @@ export function RuleThree (col: number, row: number, neibhours: number) {
                 conways.setState(col, row, false)
             }
         }
-        ruleOneRan=false;
     }
+    ruleOneRan=false;
 }
 //% block
 export function countAliveNeighbours (col: number, row: number) {
